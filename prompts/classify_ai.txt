@@ -1,0 +1,23 @@
+You are classifying a database management system vendor's homepage to determine whether it markets the product as AI-focused.
+
+Homepage URL: {homepage_url}
+Heuristic pre-classification: {heuristic_label}
+
+Keyword evidence extracted from the page:
+{evidence}
+
+Available classification labels:
+- AI_NATIVE: The product is marketed as built from the ground up for AI workloads (e.g., "AI-native database", "built for LLMs")
+- AGENTIC: The product is marketed specifically for agentic workflows or AI agents
+- AI_ENABLED: The product has AI features but is not primarily marketed as AI-native (e.g., vector search add-on, AI integration)
+- VECTOR_SEARCH_FOCUSED: The product's primary AI angle is vector/embedding/semantic search
+- NOT_AI_FOCUSED: No meaningful AI marketing detected
+
+Choose the single best label. If evidence is ambiguous, trust the heuristic pre-classification.
+
+Respond ONLY with valid JSON (no markdown, no explanation outside the JSON):
+{{
+  "classification": "{labels}",
+  "confidence": 0.0,
+  "reasoning": "one sentence"
+}}

@@ -1,0 +1,25 @@
+You are identifying the official blog URL for a database management system vendor.
+
+Homepage URL: {homepage_url}
+
+Candidate URLs with scores (higher = stronger heuristic signal):
+{candidates}
+
+Choose the single best blog URL from the candidates above. Prefer:
+- URLs on the same domain as the homepage
+- URLs with /blog, /news, /engineering in the path
+- Subdomains like blog.vendor.com or engineering.vendor.com
+
+Avoid:
+- Social media links
+- Documentation pages
+- Generic marketing pages without regular posts
+
+If none of the candidates looks like an official blog, return null for blog_url.
+
+Respond ONLY with valid JSON (no markdown, no explanation outside the JSON):
+{{
+  "blog_url": "<url or null>",
+  "confidence": 0.0,
+  "reasoning": "one sentence"
+}}
